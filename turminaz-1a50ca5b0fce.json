@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "turminaz",
+  "private_key_id": "1a50ca5b0fcee344850677774b321cbbf42a5c6d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDuujeILDpM+XEq\nqpiEKB92tI12qRKKnp9z+n3lK/+IzhqeFAts5T35Of2slaqujMtZThOba16St0du\n1dtwSGLqjkPpfworv8ItToriIRTg6yXYLKUnKqnyll+1nHQL0vFc8BzBLo4yZG8+\nvuAODXjWDL09B5cDPm8tLJj2yfgutyH/OSWoJV+x5W5iutUePDgn14Nl5EYqgLT5\nyPUcxS+8UA+MgP4XbKNbCgF4lXQNBPq5UL7ZG3HnZFHv0VdkX1MmlB7UX9sNX9gG\n0xCVvtoYJ80iBCMjGxh3nURHXSZYPyLQDwtHTNOMqmWWVkd/mAUn+ZA95YM0v5K6\nk3DTUX63AgMBAAECggEADPQFt1nPAAY44bvH8sPKkUJSurGJ1AOvWzeoRRsSDnZA\nc3ta81ms9yzyWr70N+xjzEC0R6aXxxYyxgzMj1ceJuP5Q14lSyJogtTULFjnLR0V\nPJmPjISAHC2Um+IVWd7kQcq1hLXl+U4By0HIHnsUp2ihjAIxa3ejyKu20Q08bixe\n0vlGK/lT7sLb5XizFC5Wb5aVQ5tDjncZBviFrRw7SxyumZfPQn0wSrVHHow5WJF6\nU/YYJImLh6F2vQPf6mMATlMMLbWuNHfM2Ztl8JTJ9iG3tnb6Op/wG63DjJlCpLq8\nqV8RB3LYnxUdce+NvrSNMksxrT+jrhCLsdd7ujaRYQKBgQD7fhzFfJMcx4n/rbSN\nW2ZX7CZoU7aB5CIFreIWNDxEiYuWvszm8NszRtK22Fquf/T/AVqEn5JcPmFqB930\noEBQHrhZ+vFZWdhbtLnjw9iPsPxcwkqgziunlKfUMjUfIFHs/NbfbdH3dLsUwO8c\nJMBZXdErPxXXLYPyl+pGYxhJMwKBgQDzAYkkwoAgWnZPS5Y5AvMPUhRkWB2zctAt\n2gtlRR809t9q0UYG2/QCX0L3arcuBmFEwgKaNxw6uRDYdysvDsgkDRafElCQhU+G\nlgo7y6foSPThh9iPLMCYE8chlhsf1xJB6WmHPbNLr0dlDzY9C8ZmeTY4CoXi6B3W\nrTsM8aRcbQKBgGKSWIaTQDn8f7tGA0mQdHmrppYnkZYxq6AcOkxHpwOaAatRF5DB\nALmFXduqy0gwAP/eMPNgdAZRsO7VLIrQMMT2dX1XHTfPPj0bheye+4e+b/uPb569\nkGC7pFhIYYfUrCe+Jh4mtjBOgXEt+cpHIVklq3FO5amUPm5cWsfB2Wf/AoGAItUL\nhXtjxj9xSfh5tf5YPM/1IFUJHNnOQWRJ0eBQktT4PWV19jG9DkH9ZV2kmDJN6v8s\nRFK19yzj30Nlqz8hLRm7Ll3/sleJiK8lFGEi1kbu4w0H2638hVAAcS4FAVFgypXc\njIgplSWwxCmkCqgPbkzdmrbXbij7bfQyzK4ucxkCgYBFxnvr4g4IJAPEUBLOiwxN\n67XoTTlgOWKAo9ripTHg2tab/GN0nwSap76b8hOMc5UiHUsDrFwNVfxSfagfqgVp\n5NatskemQBSRl6l2SItXAcDPDlfq0IWcrPu7mkhPmvi2pGZ71XdlOvHVNhTu4tiI\nkYaRYoTEr3VWjWl+n7G/Cw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "pubsub-publisher@turminaz.iam.gserviceaccount.com",
+  "client_id": "118345322583360025714",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pubsub-publisher%40turminaz.iam.gserviceaccount.com"
+}
