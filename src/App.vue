@@ -10,5 +10,7 @@ export default {
   components: {
     MatchUploadForm,
   },
+  publicPath: "./match-register",
+  assetsDir: "match-register",
 };
 </script>

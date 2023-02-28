@@ -11,13 +11,13 @@
     <input
       :type="inputType"
       class=""
-      min="1"
+      min="0"
       step="1"
+      :placeholder="placeholder"
       pattern="\d*"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
     />
-    <label for="floatingInput" class="text-gray-700">{{ placeholder }}</label>
   </div>
 
   <div v-if="inputType === 'time'" class="form-floating mb-3">

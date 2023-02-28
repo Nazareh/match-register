@@ -201,49 +201,7 @@
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <p>Scoring type</p>
-          <div
-            class="input-errors"
-            v-for="error of v$.formData.scoringType.$errors"
-            :key="error.$uid"
-          >
-            <div class="error-msg">{{ error.$message }}</div>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="radio-box">
-              <input
-                type="radio"
-                class="radio-box-content"
-                name="scoringType"
-                id="games"
-                value="GAMES"
-                v-model="formData.scoringType"
-              />
-              <label
-                class="form-check-label inline-block text-gray-800"
-                for="gamesOnly"
-              >
-                Games Only
-              </label>
-            </div>
-            <div class="radio-box">
-              <input
-                type="radio"
-                name="scoringType"
-                value="SETS"
-                v-model="formData.scoringType"
-                class="radio-box-content"
-              />
-              <label
-                class="form-check-label inline-block text-gray-800"
-                for="sets"
-              >
-                Sets
-              </label>
-            </div>
-          </div>
+          <Notifications position="top-center" />
         </div>
 
         <button
@@ -262,6 +220,9 @@ import BaseInput from "./BaseInput.vue";
 import { useVuelidate } from "@vuelidate/core";
 import { required, integer } from "@vuelidate/validators";
 import VueTimepicker from "vue3-timepicker/src/VueTimepicker.vue";
+import { useNotification } from "@kyvg/vue3-notification";
+
+const { notify } = useNotification();
 
 function roundToNearest(date = new Date()) {
   const minutes = 15;
@@ -282,27 +243,42 @@ const stateToPayload = function ({
   team2,
   scoreTeam1,
   scoreTeam2,
-  scoringType,
   date,
   time,
 }) {
   const payload = {
-    ...court,
-    ...team1,
-    ...team2,
-    ...scoreTeam1,
-    ...scoreTeam2,
-    ...scoringType,
+    court,
     ...{ dateTime: combineDateAndTime(date, time) },
+    team1: {
+      player1: {
+        id: team1.player1,
+      },
+      player2: {
+        id: team1.player2,
+      },
+    },
+    team2: {
+      player1: {
+        id: team2.player1,
+      },
+      player2: {
+        id: team2.player2,
+      },
+    },
+    matchResult: {
+      wins: scoreTeam1,
+      losses: scoreTeam2,
+    },
+    rated: true,
   };
-  console.log(payload);
+
   return JSON.stringify(payload);
 };
 
 export default {
   name: "MainUploadForm",
   setup() {
-    return { v$: useVuelidate() };
+    return { v$: useVuelidate({ $autoDirty: true }) };
   },
 
   data() {
@@ -340,7 +316,7 @@ export default {
   methods: {
     async onSubmit() {
       const result = await this.v$.$validate();
-      console.log(this.formData);
+
       if (!result) {
         return;
       }
@@ -358,9 +334,14 @@ export default {
           this.formData.team1.player1 = null;
           this.formData.team1.player2 = null;
           this.formData.team2.player1 = null;
-          this.formData.team2.player1 = null;
+          this.formData.team2.player2 = null;
           this.formData.scoreTeam1 = null;
           this.formData.scoreTeam2 = null;
+          this.v$.$reset();
+          notify({
+            type: "success",
+            title: "Match uploaded. Thank you 🎾",
+          });
         });
       } catch (error) {
         console.log(error);
