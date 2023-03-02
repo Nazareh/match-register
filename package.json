@@ -1,5 +1,6 @@
 {
   "name": "match-register",
+  "homepage": "https://nazareh.github.io/match-register/",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,6 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
