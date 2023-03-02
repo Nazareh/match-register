@@ -1,6 +1,6 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import "@/index.css";
-import Notifications from "@kyvg/vue3-notification";
+import { createApp } from 'vue'
+import App from './App.vue'
 
-createApp(App).use(Notifications).mount("#app");
+import './assets/main.css'
+
+createApp(App).mount('#app')
